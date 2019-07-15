@@ -1,0 +1,8 @@
+.likesCount{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.liked{
+    color: palevioletred;
+}

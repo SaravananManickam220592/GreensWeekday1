@@ -1,0 +1,6 @@
+<div class="container" style="padding: 20px;">
+  <h3>Instragram Like</h3>
+  <span [class.liked]="isLiked" (click)="likeClicked()"><i class="fas fa-heart fa-2x"></i></span>
+  &nbsp;
+  <span class="likesCount">{{ likesCount }}</span>
+</div>

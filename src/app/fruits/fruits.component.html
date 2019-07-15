@@ -1,0 +1,9 @@
+<!-- <img [src]='imageUrl' >
+<button [disabled]="status">Submit</button>
+<button [hidden]="status">Reset</button>
+<div [class.offer]="offer">Fruits are available at discount</div>
+<div [style.background-color]="bgColor" [style.color]="color">Grocery are available</div> -->
+<!-- Enter a fruit Name : <input type="text"  (keyup)="addFruit($event)"> -->
+<!-- Enter a fruit Name : <input type="text" #fruit ><button (click)="addFruitFromButton(fruit)">Submit</button> -->
+Enter a Fruit Name : <input type="text" [(ngModel)]="fruitName" >
+<h3>Fruit Name is : {{ fruitName }}</h3>

@@ -1,0 +1,12 @@
+<!-- <h3>Buy Grocery here !!!</h3>
+               <h4>Buy Dairy products here !!!</h4>
+               <h4>Buy Fresh meat here !!!</h4>
+
+               <h2> Todays Special Offer  - {{ getOfferProduct() }}</h2>
+               <h3>Offer Price - {{ '$'+price * 0.5 }}</h3> -->
+
+<h3>Product Name : {{ name | lowercase }}</h3>
+<h3>Price : {{price | currency : 'INR': 'symbol':'4.2-2'}}</h3>
+<h3>Date : {{today | date : 'h:mm a z'}}</h3>
+<h3> Percantage : {{ a | percent :'4.3-5'}}</h3>
+<h3>Capitalized : {{  name | capitalize : 2}}</h3>

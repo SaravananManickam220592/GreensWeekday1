@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
+  title = 'Greens Technology';
+
+  post:any = { likesCount : 89 , isLiked : true };
+
+  likeEvent(likeData){
+    console.log(likeData);
+  }
 }

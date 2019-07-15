@@ -1,0 +1,47 @@
+<!-- <div class="alert alert-success" *ngIf="addStatus;else yetToAdd"> Student addded successfully!!</div>
+<ng-template #yetToAdd>
+  <div class="alert alert-secondary">Please add a student</div>
+</ng-template> -->
+
+<!-- <ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="viewmode=='list'" (click)="viewmode='list'">List view</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="viewmode=='grid'" (click)="viewmode='grid'">Grid view</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="viewmode=='map'" (click)="viewmode='map'">Map view</a>
+  </li>
+</ul>
+<div class="container" style="padding: 30px;"  [ngSwitch]="viewmode">
+  <div *ngSwitchCase="'list'">List view content</div>
+  <div *ngSwitchCase="'grid'">Grid view content</div>
+  <div *ngSwitchCase="'map'">Map view content</div>
+  <div *ngSwitchDefault>invalid view mode</div>
+</div> -->
+
+<button class="btn btn-primary" (click)="loadCourses()">
+  Load Courses
+</button>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses; index as i;first as f;last as l;trackBy : courseTracker">
+      <td [class.firstClass]="f">{{ (i+1) }}</td>
+      <td [class.firstClass]="f">{{course.id}}</td>
+      <td [class.firstClass]="f">{{course.name}}</td>
+      <td [class.firstClass]="f">{{course.price}}</td>
+    </tr>
+  </tbody>
+</table>
+<div [ngClass]="{status1 : status1 , status2 : status2 }" >Courses are available in offer</div>
+<div [ngStyle]="{'background-color' : bgColor , 'color': color}">Year end sale started</div>
