@@ -1,3 +1,4 @@
+import { DebitCardDirective } from './debitcard.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +12,8 @@ import { GroceryComponent } from './grocery/grocery.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { CustomPipe } from './custom.pipe';
 import { DirectivesComponent } from './directives/directives.component';
+import { DebitcardComponent } from './debitcard/debitcard.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DirectivesComponent } from './directives/directives.component';
     CardComponent,
     CapitalizePipe,
     CustomPipe,
-    DirectivesComponent
+    DirectivesComponent,
+    DebitcardComponent,
+    DebitCardDirective,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
