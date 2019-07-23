@@ -1,0 +1,35 @@
+<form [formGroup]="registerForm">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" 
+    id="email" 
+    name="email" placeholder="Enter email" ngModel
+    formControlName="email"  >
+    <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+      <div *ngIf="email.errors.required"> please enter your email</div>
+      <div *ngIf="email.errors.email">Please enter a valid email</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" 
+     id="name" 
+    name="name" 
+    formControlName="name"
+    placeholder="Enter Names">
+    <div class="alert alert-danger"  *ngIf="name.touched && name.invalid">
+      <div *ngIf="name.errors.required">Please enter your name</div>
+      <div *ngIf="name.errors.usernameContainsSpace" >Username cannot contain space</div>
+      <div *ngIf="name.errors.usernameShouldBeUnique" >Username already taken</div>
+    </div>
+    <div class="alert alert-secondary" *ngIf="name.pending" >Checking username availability</div>
+  </div>
+  <div class="form-group">
+    <label for="mobile">Mobile</label>
+    <input type="text" class="form-control" 
+    id="mobile" 
+    formControlName="mobile"
+    name="mobile"  placeholder="Enter Mobile Number" >
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid" (click)="registerStudent()" >Submit</button>
+</form>

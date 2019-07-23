@@ -2,6 +2,8 @@ import { DebitCardDirective } from './debitcard.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FruitsComponent } from './fruits/fruits.component';
@@ -14,6 +16,8 @@ import { CustomPipe } from './custom.pipe';
 import { DirectivesComponent } from './directives/directives.component';
 import { DebitcardComponent } from './debitcard/debitcard.component';
 import { StudentComponent } from './student/student.component';
+import { RegisterComponent } from './register/register.component';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +31,15 @@ import { StudentComponent } from './student/student.component';
     DirectivesComponent,
     DebitcardComponent,
     DebitCardDirective,
-    StudentComponent
+    StudentComponent,
+    RegisterComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
